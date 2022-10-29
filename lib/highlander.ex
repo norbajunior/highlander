@@ -108,8 +108,8 @@ defmodule Highlander do
   end
 
   defp handle_conflict(_name, pid1, pid2) do
-    Process.exit(pid2, :name_conflict)
-    pid1
+    Process.exit(pid1, :name_conflict)
+    pid2
   end
 
   defp register(state) do
